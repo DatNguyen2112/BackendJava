@@ -9,7 +9,7 @@
 <body>
     <div>
         <h1>
-            ${dat}
+            hello from index
         </h1>
         
     </div>
