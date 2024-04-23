@@ -19,7 +19,6 @@ public class UserController {
 
     // Dependence Injection
     private final UserService userService;
-
     public UserController(UserService userService) {
         this.userService = userService;
     }
