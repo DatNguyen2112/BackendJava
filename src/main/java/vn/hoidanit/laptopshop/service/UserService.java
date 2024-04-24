@@ -21,11 +21,11 @@ public class UserService {
         return newEntity;
     }
 
-    public List<User> getAllUser() {
-        return this.userRepository.findAll().;
+    public List<User> getAllUsers() {
+        return this.userRepository.findAll();
     }
 
-    public List<User> getAllUserByEmail(String email) {
+    public List<User> getAllUsersByEmail(String email) {
         List<User> arrUsers = this.userRepository.findOneByEmail(email);
         // System.out.println(arrUsers);
         return arrUsers;

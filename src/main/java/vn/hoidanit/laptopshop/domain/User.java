@@ -24,6 +24,16 @@ public class User {
     private String address;
     private String phone;
 
+    private String avatar;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     // Mỗi user sẽ thuộc 1 role - Many user to one role
     @ManyToOne
     @JoinColumn(name = "role_id")

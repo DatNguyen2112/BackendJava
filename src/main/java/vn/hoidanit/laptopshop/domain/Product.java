@@ -16,8 +16,8 @@ public class Product {
     private String name;
     private double price;
     private String image;
-    private String detailDecs;
-    private String shortDecs;
+    private String detailDesc;
+    private String shortDesc;
     private long quantity;
     private long sold;
     private String factory;
@@ -55,20 +55,20 @@ public class Product {
         this.image = image;
     }
 
-    public String getDetailDecs() {
-        return detailDecs;
+    public String getDetailDesc() {
+        return detailDesc;
     }
 
-    public void setDetailDecs(String detailDecs) {
-        this.detailDecs = detailDecs;
+    public void setDetailDesc(String detailDesc) {
+        this.detailDesc = detailDesc;
     }
 
-    public String getShortDecs() {
-        return shortDecs;
+    public String getShortDesc() {
+        return shortDesc;
     }
 
-    public void setShortDecs(String shortDecs) {
-        this.shortDecs = shortDecs;
+    public void setShortDesc(String shortDesc) {
+        this.shortDesc = shortDesc;
     }
 
     public long getQuantity() {
@@ -105,8 +105,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price=" + price + ", image=" + image + ", detailDecs="
-                + detailDecs + ", shortDecs=" + shortDecs + ", quantity=" + quantity + ", sold=" + sold + ", factory="
+        return "Product [id=" + id + ", name=" + name + ", price=" + price + ", image=" + image + ", detailDesc="
+                + detailDesc + ", shortDecs=" + shortDesc + ", quantity=" + quantity + ", sold=" + sold + ", factory="
                 + factory + ", target=" + target + "]";
     }
 
