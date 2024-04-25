@@ -4,15 +4,20 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import vn.hoidanit.laptopshop.domain.Role;
 import vn.hoidanit.laptopshop.domain.User;
+import vn.hoidanit.laptopshop.domain.DTO.RegisterDTO;
+import vn.hoidanit.laptopshop.repository.RoleRepository;
 import vn.hoidanit.laptopshop.repository.UserRepository;
 
 @Service
 public class UserService {
     private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
+        this.roleRepository = roleRepository;
     }
 
     public User handleSaveUser(User newUser) {
@@ -41,4 +46,19 @@ public class UserService {
         this.userRepository.deleteById(id);
     }
 
+    public Role getRoleByName(String name) {
+        return this.roleRepository.findByName(name);
+    }
+
+    public User transformToAnotherObj(RegisterDTO registerDTO) {
+        User userDTO = new User();
+        userDTO.setFullName(registerDTO.getFirstName() + registerDTO.getLastName());
+        userDTO.setEmail(registerDTO.getEmail());
+        userDTO.setPassword(registerDTO.getPassword());
+        return userDTO;
+    }
+
+    public boolean checkEmail(String email) {
+        return this.userRepository.existsByEmail(email);
+    }
 }
