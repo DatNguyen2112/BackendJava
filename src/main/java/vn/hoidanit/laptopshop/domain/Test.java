@@ -13,6 +13,7 @@ public class Test {
     private Long id;
 
     private String name;
+
     private String email;
 
     public Long getId() {
